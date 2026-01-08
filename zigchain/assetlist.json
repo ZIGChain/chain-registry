@@ -25,21 +25,10 @@
           "exponent": 6
         }
       ],
-      "type_asset": "sdk.coin",
       "base": "uzig",
-      "name": "ZIG",
-      "display": "zig",
+      "name": "ZIGChain Native Token",
+      "display": "ZIG",
       "symbol": "ZIG",
-      "traces": [
-        {
-          "type": "additional-mintage",
-          "counterparty": {
-            "chain_name": "ethereum",
-            "base_denom": "0xb2617246d0c6c0087f18703d576831899ca94f01"
-          },
-          "provider": "ZIGChain"
-        }
-      ],
       "coingecko_id": "zignaly",
       "keywords": [
         "zigchain",
@@ -47,6 +36,14 @@
         "wealth generation infrastructure",
         "wasm"
       ],
+      "socials": {
+        "website": "https://zigchain.com/",
+        "x": "https://x.com/zigchain",
+        "telegram": "https://t.me/ZignalyHQ",
+        "discord": "https://discord.zignaly.com",
+        "medium": "https://medium.com/zignaly"
+      },
+      "type_asset": "sdk.coin",
       "logo_URIs": {
         "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/zigchain/images/zigchain.png",
         "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/zigchain/images/zigchain.svg"
@@ -60,14 +57,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/zigchain/images/zigchain.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/zigchain/images/zigchain.svg"
         }
-      ],
-      "socials": {
-        "website": "https://zigchain.com/",
-        "telegram": "https://t.me/ZignalyHQ",
-        "discord": "https://discord.zignaly.com",
-        "medium": "https://medium.com/zignaly",
-        "x": "https://x.com/zigchain"
-      }
+      ]
     },
     {
       "description": "Staked Zig Token by Valdora Finance - Decentralized staking with stZIG",
@@ -85,6 +75,13 @@
       "name": "Staked Zig",
       "display": "stzig",
       "symbol": "STZIG",
+      "socials": {
+        "website": "https://valdora.finance",
+        "x": "https://x.com/Valdora_finance",
+        "telegram": "https://t.me/ValdoraWarriors",
+        "discord": "http://discord.gg/valdora"
+      },
+      "type_asset": "sdk.coin",
       "logo_URIs": {
         "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/zigchain/images/stzig.png"
       },
@@ -92,14 +89,7 @@
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/zigchain/images/stzig.png"
         }
-      ],
-      "type_asset": "sdk.coin",
-      "socials": {
-        "website": "https://valdora.finance",
-        "telegram": "https://t.me/ValdoraWarriors",
-        "discord": "http://discord.gg/valdora",
-        "x": "https://x.com/Valdora_finance"
-      }
+      ]
     },
     {
       "description": "Noble USDC on ZIGChain",
@@ -117,28 +107,11 @@
           "exponent": 6
         }
       ],
-      "type_asset": "ics20",
       "base": "ibc/6490A7EAB61059BFC1CDDEB05917DD70BDF3A611654162A1A47DB930D40D8AF4",
       "name": "Noble USDC",
       "display": "usdc",
       "symbol": "USDC",
       "traces": [
-        {
-          "type": "synthetic",
-          "counterparty": {
-            "chain_name": "forex",
-            "base_denom": "USD"
-          },
-          "provider": "Circle"
-        },
-        {
-          "type": "additional-mintage",
-          "counterparty": {
-            "chain_name": "ethereum",
-            "base_denom": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
-          },
-          "provider": "Circle"
-        },
         {
           "type": "ibc",
           "counterparty": {
@@ -148,13 +121,16 @@
           },
           "chain": {
             "channel_id": "channel-3",
-            "path": "transfer/channel-3/uusdc"
+            "path": "transfer/channel-3/uusdc",
+            "provider": "ibc"
           }
         }
       ],
+      "coingecko_id": "usd-coin",
+      "type_asset": "ics20",
       "logo_URIs": {
-        "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.png",
-        "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg"
+        "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/usdc.png",
+        "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/usdc.svg"
       },
       "images": [
         {
@@ -162,14 +138,10 @@
             "chain_name": "noble",
             "base_denom": "uusdc"
           },
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg",
-          "theme": {
-            "circle": true
-          }
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/usdc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/usdc.svg"
         }
-      ],
-      "coingecko_id": "usd-coin"
+      ]
     },
     {
       "description": "Cosmos Hub Atom on ZIGChain",
@@ -186,7 +158,6 @@
           "exponent": 6
         }
       ],
-      "type_asset": "ics20",
       "base": "ibc/EF48E6B1A1A19F47ECAEA62F5670C37C0580E86A9E88498B7E393EB6F49F33C0",
       "name": "Cosmos Hub Atom",
       "display": "atom",
@@ -201,10 +172,13 @@
           },
           "chain": {
             "channel_id": "channel-4",
-            "path": "transfer/channel-4/uatom"
+            "path": "transfer/channel-4/uatom",
+            "provider": "ibc"
           }
         }
       ],
+      "coingecko_id": "cosmos",
+      "type_asset": "ics20",
       "logo_URIs": {
         "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png",
         "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg"
@@ -218,8 +192,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg"
         }
-      ],
-      "coingecko_id": "cosmos"
+      ]
     },
     {
       "description": "ZIG bridged via Axelar on ZIGChain",
@@ -228,7 +201,7 @@
           "denom": "ibc/9BEE293E6559ED860CC702685996F394D4991D6DFFD60A19ABC3723E6F34788A",
           "exponent": 0,
           "aliases": [
-            "weizig.axl"
+            "unit-zig"
           ]
         },
         {
@@ -236,7 +209,6 @@
           "exponent": 18
         }
       ],
-      "type_asset": "ics20",
       "base": "ibc/9BEE293E6559ED860CC702685996F394D4991D6DFFD60A19ABC3723E6F34788A",
       "name": "ZIG (Axelar)",
       "display": "zig.axl",
@@ -251,10 +223,12 @@
           },
           "chain": {
             "channel_id": "channel-1",
-            "path": "transfer/channel-1/unit-zig"
+            "path": "transfer/channel-1/unit-zig",
+            "provider": "ibc"
           }
         }
       ],
+      "type_asset": "ics20",
       "logo_URIs": {
         "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/zigchain/images/zigchain.png",
         "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/zigchain/images/zigchain.svg"
@@ -285,7 +259,6 @@
           "exponent": 18
         }
       ],
-      "type_asset": "ics20",
       "base": "ibc/5E970F9FF7B696B42F75B92CC05A74B9C44AB0B5D231FBE794A29D74344B19D7",
       "name": "Ethereum",
       "display": "eth",
@@ -300,9 +273,9 @@
           },
           "chain": {
             "channel_id": "08-wasm-1369",
-            "path": "transfer/08-wasm-1369/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
-          },
-          "provider": "Eureka"
+            "path": "transfer/08-wasm-1369/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "provider": "Eureka"
+          }
         },
         {
           "type": "ibc",
@@ -313,10 +286,13 @@
           },
           "chain": {
             "channel_id": "channel-4",
-            "path": "transfer/channel-4/transfer/08-wasm-1369/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+            "path": "transfer/channel-4/transfer/08-wasm-1369/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "provider": "ibc"
           }
         }
       ],
+      "coingecko_id": "ethereum",
+      "type_asset": "ics20",
       "logo_URIs": {
         "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.png",
         "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.svg"
@@ -327,8 +303,8 @@
             "chain_name": "ethereum",
             "base_denom": "wei"
           },
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.svg",
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.png"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.svg"
         }
       ]
     },
@@ -337,14 +313,16 @@
       "denom_units": [
         {
           "denom": "ibc/E5EE3EF1D0770C7E5F8CE3AF49B9828613BC90C12EA7577D688B1022EFDDA43C",
-          "exponent": 0
+          "exponent": 0,
+          "aliases": [
+            "0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee"
+          ]
         },
         {
           "denom": "neiro",
           "exponent": 9
         }
       ],
-      "type_asset": "ics20",
       "base": "ibc/E5EE3EF1D0770C7E5F8CE3AF49B9828613BC90C12EA7577D688B1022EFDDA43C",
       "name": "NEIRO",
       "display": "neiro",
@@ -359,9 +337,9 @@
           },
           "chain": {
             "channel_id": "08-wasm-1369",
-            "path": "transfer/08-wasm-1369/0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee"
-          },
-          "provider": "Eureka"
+            "path": "transfer/08-wasm-1369/0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee",
+            "provider": "Eureka"
+          }
         },
         {
           "type": "ibc",
@@ -372,10 +350,12 @@
           },
           "chain": {
             "channel_id": "channel-4",
-            "path": "transfer/channel-4/transfer/08-wasm-1369/0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee"
+            "path": "transfer/channel-4/transfer/08-wasm-1369/0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee",
+            "provider": "ibc"
           }
         }
       ],
+      "type_asset": "ics20",
       "logo_URIs": {
         "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/neiro.png"
       },
@@ -394,14 +374,16 @@
       "denom_units": [
         {
           "denom": "ibc/7B02D9C0746D2D6551CD358D4C7ABAC6EE94527D613BACFDEE122559CEB41AA4",
-          "exponent": 0
+          "exponent": 0,
+          "aliases": [
+            "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
+          ]
         },
         {
           "denom": "wbtc",
           "exponent": 8
         }
       ],
-      "type_asset": "ics20",
       "base": "ibc/7B02D9C0746D2D6551CD358D4C7ABAC6EE94527D613BACFDEE122559CEB41AA4",
       "name": "Wrapped Bitcoin on ZIGChain",
       "display": "wbtc",
@@ -416,9 +398,9 @@
           },
           "chain": {
             "channel_id": "08-wasm-1369",
-            "path": "transfer/08-wasm-1369/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
-          },
-          "provider": "Eureka"
+            "path": "transfer/08-wasm-1369/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+            "provider": "Eureka"
+          }
         },
         {
           "type": "ibc",
@@ -429,10 +411,13 @@
           },
           "chain": {
             "channel_id": "channel-4",
-            "path": "transfer/channel-4/transfer/08-wasm-1369/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
+            "path": "transfer/channel-4/transfer/08-wasm-1369/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+            "provider": "ibc"
           }
         }
       ],
+      "coingecko_id": "wrapped-bitcoin",
+      "type_asset": "ics20",
       "logo_URIs": {
         "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.png",
         "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.svg"
@@ -464,7 +449,6 @@
           "exponent": 6
         }
       ],
-      "type_asset": "ics20",
       "base": "ibc/630F28419AFD118B9EA8B96AE9D280CFDA4EB9FAB3108F1CA9E7DC00F396B4F9",
       "name": "Tether USD",
       "display": "usdt",
@@ -479,9 +463,9 @@
           },
           "chain": {
             "channel_id": "08-wasm-1369",
-            "path": "transfer/08-wasm-1369/0xdac17f958d2ee523a2206206994597c13d831ec7"
-          },
-          "provider": "Eureka"
+            "path": "transfer/08-wasm-1369/0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "provider": "Eureka"
+          }
         },
         {
           "type": "ibc",
@@ -492,10 +476,13 @@
           },
           "chain": {
             "channel_id": "channel-4",
-            "path": "transfer/channel-4/transfer/08-wasm-1369/0xdac17f958d2ee523a2206206994597c13d831ec7"
+            "path": "transfer/channel-4/transfer/08-wasm-1369/0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "provider": "ibc"
           }
         }
       ],
+      "coingecko_id": "tether",
+      "type_asset": "ics20",
       "logo_URIs": {
         "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.png",
         "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg"
@@ -507,10 +494,7 @@
             "base_denom": "0xdac17f958d2ee523a2206206994597c13d831ec7"
           },
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg",
-          "theme": {
-            "circle": true
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg"
         }
       ]
     },
@@ -529,12 +513,24 @@
           "exponent": 6
         }
       ],
-      "type_asset": "ics20",
       "base": "ibc/729AE368985B0F7B35648D17BA74A3D0A1C833FBAE8C3B49D75C6A2B578B9930",
       "name": "Stride Staked ATOM",
       "display": "statom",
       "symbol": "stATOM",
       "traces": [
+        {
+          "type": "ibc",
+          "counterparty": {
+            "chain_name": "stride",
+            "base_denom": "stuatom",
+            "channel_id": "channel-391"
+          },
+          "chain": {
+            "channel_id": "channel-4",
+            "path": "transfer/channel-4/transfer/channel-391/stuatom",
+            "provider": "ibc"
+          }
+        },
         {
           "type": "ibc",
           "counterparty": {
@@ -544,10 +540,13 @@
           },
           "chain": {
             "channel_id": "channel-4",
-            "path": "transfer/channel-4/transfer/channel-391/stuatom"
+            "path": "transfer/channel-4/transfer/channel-391/stuatom",
+            "provider": "ibc"
           }
         }
       ],
+      "coingecko_id": "stride-staked-atom",
+      "type_asset": "ics20",
       "logo_URIs": {
         "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/statom.png",
         "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/statom.svg"
@@ -561,8 +560,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/statom.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/statom.svg"
         }
-      ],
-      "coingecko_id": "stride-staked-atom"
+      ]
     }
   ]
 }
